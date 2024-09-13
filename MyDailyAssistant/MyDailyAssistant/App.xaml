@@ -2,8 +2,14 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:MyDailyAssistant"
+             xmlns:viewModel="clr-namespace:MyDailyAssistant.MVVM.ViewModel"
+             xmlns:view="clr-namespace:MyDailyAssistant.MVVM.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/MenuButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

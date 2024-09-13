@@ -69,9 +69,53 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\NotesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\ScheduleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\ToDoListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\WorkoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MenuButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\NotesViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\ScheduleViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\ToDoListViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\WorkoutViewModel.cs" />
+    <Compile Include="MVVM\View\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\NotesView.xaml.cs">
+      <DependentUpon>NotesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\ScheduleView.xaml.cs">
+      <DependentUpon>ScheduleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\ToDoListView.xaml.cs">
+      <DependentUpon>ToDoListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\WorkoutView.xaml.cs">
+      <DependentUpon>WorkoutView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -89,6 +133,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\Lobster-Regular.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,9 +143,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Fonts\" />
     <Folder Include="MVVM\Model\" />
-    <Folder Include="MVVM\View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
